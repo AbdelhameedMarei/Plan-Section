@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+::selection{
+    background-color: rgb(151, 105, 105);
+}
+
+.plans{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(49, 85, 193);
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.plan{
+    background-color: #333;
+    padding: 30px 30px;
+    border-radius: 5px;
+    min-width: 220px;
+}
+
+.plan h4{
+    font-size: 15px;
+}
+
+.plan h1{
+    font-size: 30px;
+    margin-top: 15px
+}
+
+.plan h1 small{
+    font-size: 12px;
+    color: #DDD;
+}
+
+.plan ul{
+    margin-top: 40px;
+    text-align: left;
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    margin-right: 5px;
+}
+
+.plan ul li{
+    line-height: 1.9;
+    font-size: 13px;
+}
+
+.plan button{
+    background: transparent;
+    border: 1px solid rgb(220, 48, 48);
+    padding: 8px 30px;
+    margin-top: 30px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: left;
+    user-select: none;
+    transition: .4s;
+}
+
+.plan:nth-child(2) button{
+    background-color: rgb(220, 48, 48);
+}
+
+.plan button:hover{
+    transform: scaleX(1.1);
+}
+
+@media screen and (max-width: 600px) {
+
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .container{
+        gap: 15px;
+        justify-content: center;
+    }
+}
